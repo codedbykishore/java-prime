@@ -3,6 +3,7 @@ public class RecursionDemo {
 
     public static void main(String[] args) {
         welcome(10);
+        return;
     }
 
     public static void welcome(int count) {
