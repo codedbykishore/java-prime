@@ -1,7 +1,5 @@
 public class Prime {
 
-    // a fucntion to print factors of a number
-
     public static void printFactors(int num) {
         System.out.println("Factors of " + num + " : ");
         for (int i = 1; i <= num; i++) {
