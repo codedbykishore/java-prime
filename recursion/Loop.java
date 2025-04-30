@@ -3,21 +3,19 @@ public class Loop {
 
     public static void main(String[] args) {
 
-        // loop(1, Integer.MAX_VALUE);
-        loop(1, 10);
+        int num = 10;
+        loop(num);
 
         return;
     }
 
-    public static void loop(int start, int end) {
+    public static void loop(int n) {
 
-        System.out.println(start);
-
-        if (start == end) {
+        if (n < 1) {
             return;
         }
 
-        loop(start + 1, end);
-
+        loop(n - 1);
+        System.out.println(n);
     }
 }
