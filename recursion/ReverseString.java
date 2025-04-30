@@ -2,7 +2,7 @@
 public class ReverseString {
 
     public static void main(String[] args) {
-        String word = "malayalam";
+        String word = "malayalan";
         String reversed = reverse(word);
         System.out.println(reversed);
     }
