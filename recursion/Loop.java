@@ -15,7 +15,7 @@ public class Loop {
             return;
         }
 
-        loop(n - 1);
         System.out.println(n);
+        loop(n - 1);
     }
 }
