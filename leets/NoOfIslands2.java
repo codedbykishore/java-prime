@@ -10,22 +10,22 @@ public class NoOfIslands2 {
                 { 0, 1, 0, 0, 1 },
         };
 
-        int islands = 0;
+        int count = 0;
         int rows = grid.length;
         int cols = grid[0].length;
 
+        printGrid(grid);
         for (int r = 0; r < rows; r++) {
             for (int c = 0; c < cols; c++) {
                 if (grid[r][c] == 1) {
-                    islands++;
+                    count++;
                     dfs(grid, r, c);
                     printGrid(grid);
-                    System.out.println();
                 }
             }
         }
 
-        System.out.println("Number of islands: " + islands);
+        System.out.println("Number of islands: " + count);
     }
 
     public static void dfs(int[][] grid, int r, int c) {
@@ -42,6 +42,11 @@ public class NoOfIslands2 {
         dfs(grid, r - 1, c);
         dfs(grid, r, c + 1);
         dfs(grid, r, c - 1);
+
+        // dfs(grid, r + 1, c + 1);
+        // dfs(grid, r - 1, c - 1);
+        // dfs(grid, r - 1, c + 1);
+        // dfs(grid, r + 1, c - 1);
     }
 
     public static void printGrid(int[][] grid) {
@@ -51,5 +56,6 @@ public class NoOfIslands2 {
             }
             System.out.println();
         }
+        System.out.println();
     }
 }

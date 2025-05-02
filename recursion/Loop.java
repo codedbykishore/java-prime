@@ -5,8 +5,6 @@ public class Loop {
 
         int num = 10;
         loop(num);
-
-        return;
     }
 
     public static void loop(int n) {
@@ -15,8 +13,8 @@ public class Loop {
             return;
         }
 
-        System.out.println(n);
+        System.out.println("Function call for " + n);
         loop(n - 1);
-        return;
+        System.out.println("Function done for " + n);
     }
 }
