@@ -37,13 +37,11 @@ public class NoOfIslands2 {
 
         grid[r][c] = 0;
 
-        // UP DOWN RIGHT LEFT
         dfs(grid, r + 1, c);
         dfs(grid, r - 1, c);
         dfs(grid, r, c + 1);
         dfs(grid, r, c - 1);
 
-        // CORNERS
         dfs(grid, r - 1, c - 1);
         dfs(grid, r + 1, c + 1);
         dfs(grid, r + 1, c - 1);
