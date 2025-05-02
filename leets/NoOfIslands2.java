@@ -1,3 +1,4 @@
+
 public class NoOfIslands2 {
 
     public static void main(String[] args) {
@@ -6,7 +7,7 @@ public class NoOfIslands2 {
                 { 1, 1, 1, 1, 0 },
                 { 1, 0, 1, 1, 0 },
                 { 1, 0, 0, 1, 0 },
-                { 0, 1, 0, 0, 1 }
+                { 0, 1, 0, 0, 1 },
         };
 
         int islands = 0;
@@ -18,16 +19,16 @@ public class NoOfIslands2 {
                 if (grid[r][c] == 1) {
                     islands++;
                     dfs(grid, r, c);
+                    printGrid(grid);
+                    System.out.println();
                 }
             }
         }
 
-        System.out.println(islands);
-        return;
+        System.out.println("Number of islands: " + islands);
     }
 
     public static void dfs(int[][] grid, int r, int c) {
-
         int rows = grid.length;
         int cols = grid[0].length;
 
@@ -41,10 +42,14 @@ public class NoOfIslands2 {
         dfs(grid, r - 1, c);
         dfs(grid, r, c + 1);
         dfs(grid, r, c - 1);
+    }
 
-        dfs(grid, r - 1, c - 1);
-        dfs(grid, r + 1, c + 1);
-        dfs(grid, r + 1, c - 1);
-        dfs(grid, r - 1, c + 1);
+    public static void printGrid(int[][] grid) {
+        for (int[] row : grid) {
+            for (int cell : row) {
+                System.out.print(cell + " ");
+            }
+            System.out.println();
+        }
     }
 }
